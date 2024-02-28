@@ -2,7 +2,7 @@ var quotes;
 var filter = "any";
 
 async function init() {
-	const requestURL = "assets/quotes.json";
+	const requestURL = "Matt00002.github.io/comm429QuoteApp/assets/quotes.json";
 	const request = new Request(requestURL);
 
 	const response = await fetch(request);
