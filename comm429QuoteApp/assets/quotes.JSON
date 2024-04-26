@@ -1,19 +1,125 @@
 {
 	"quotes": [
 		{
-			"quote": "ayooooo!",
-			"author": "some guy",
-			"category": "wise"
+			"quote": "To live is to suffer, to survive is to find some meaning in the suffering.",
+			"author": "Friedrich Nietzsche",
+			"category": "modern"
 		},
 		{
-			"quote": "weeewooo! weeewooo!",
-			"author": "ambulance",
-			"category": "sounds"
+			"quote": "Know thy self, know thy enemy. A thousand battles, a thousand victories.",
+			"author": "Sun Tzu",
+			"category": "ancient"
 		},
 		{
-			"quote": "habeas corpus, you feel me?",
-			"author": "felonius bolus",
-			"category": "scary"
+			"quote": "Quality is not an act, it is a habit.",
+			"author": "Aristotle",
+			"category": "ancient"
+		},
+		{
+			"quote": "History repeats itself, first as tragedy, second as farce.",
+			"author": "Karl Marx",
+			"category": "modern"
+		},
+		{
+			"quote": "It does not matter how slowly you go as long as you do not stop.",
+			"author": "Confucius",
+			"category": "ancient"
+		},
+		{
+			"quote": "The only true wisdom is in knowing you know nothing.",
+			"author": "Socrates",
+			"category": "ancient"
+		},
+		{
+			"quote": "It is not wisdom but Authority that makes a law.",
+			"author": "Thomas Hobbes",
+			"category": "enlightenment"
+		},
+		{
+			"quote": "All mankind... being all equal and independent, no one ought to harm another in his life, health, liberty or possessions.",
+			"author": "John Locke",
+			"category": "enlightenment"
+		},
+		{
+			"quote": "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
+			"author": "Thomas Aquinas",
+			"category": "middle"
+		},
+		{
+			"quote": "The first and greatest victory is to conquer yourself; to be conquered by yourself is of all things most shameful and vile.",
+			"author": "Plato",
+			"category": "ancient"
+		},
+		{
+			"quote": "Freedom is the recognition of necessity.",
+			"author": "Friedrich Engels",
+			"category": "modern"
+		},
+		{
+			"quote": "Death does not concern us, because as long as we exist, death is not here. And when it does come, we no longer exist.",
+			"author": "Epicurus",
+			"category": "ancient"
+		},
+		{
+			"quote": "I hear and I forget. I see and I remember. I do and I understand.",
+			"author": "Confucius",
+			"category": "ancient"
+		},
+		{
+			"quote": "Money is like manure, of very little use except it be spread.",
+			"author": "Francis Bacon",
+			"category": "enlightenment"
+		},
+		{
+			"quote": "A wise man will make more opportunities than he finds.",
+			"author": "Francis Bacon",
+			"category": "enlightenment"
+		},
+		{
+			"quote": "It is better to be feared than loved, if you cannot be both.",
+			"author": "Niccolo Machiavelli",
+			"category": "modern"
+		},
+		{
+			"quote": "The darkest places in hell are reserved for those who maintain their neutrality in times of moral crisis.",
+			"author": "Dante Alighieri",
+			"category": "middle"
+		},
+		{
+			"quote": "Nature is the art of God.",
+			"author": "Dante Alighieri",
+			"category": "middle"
+		},
+		{
+			"quote": "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
+			"author": "Thomas Aquinas",
+			"category": "middle"
+		},
+		{
+			"quote": "In heaven, all the interesting people are missing.",
+			"author": "Friedrich Nietzsche",
+			"category": "modern"
+		},
+		{
+			"quote": "Nothing is more despicable than respect based on fear.",
+			"author": "Albert Camus",
+			"category": "modern"
+		},
+		{
+			"quote": "Live as brave men; and if fortune is adverse, front its blows with brave hearts.",
+			"author": "Marcus Tullius Cicero",
+			"category": "ancient"
+		},
+		{
+			"quote": "There is nothing so absurd that some philosopher has not already said it.",
+			"author": "Marcus Tullius Cicero",
+			"category": "ancient"
+		},
+		{
+			"quote": "Not believing in force is the same as not believing in gravitation.",
+			"author": "Thomas Hobbes",
+			"category": "enlightenment"
 		}
+		
 	]
 }
