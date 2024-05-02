@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Page</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/card.css">
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        
+    </head>
+    <body>
+        <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-bold text-xl">11ty+Tailwind Site</span>
+            </div>
+    
+            <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Home
+                </a>
+                <a href="/search" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Yugioh Banlist
+                </a>
+                <a href="/blog" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white">
+                Blog
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" class="toggle" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
+            </div>
+            </div>
+        </nav>
+
+        
+            <!--
+
+<input type="text" placeholder="Search..">
+
+<ul>
+    
+        <li><a href="/yugioh/agido-the-ancient-sentinel/">Agido the Ancient Sentinel</a></li>
+    
+        <li><a href="/yugioh/ancient-fairy-dragon/">Ancient Fairy Dragon</a></li>
+    
+        <li><a href="/yugioh/anti-spell-fragrance/">Anti-Spell Fragrance</a></li>
+    
+        <li><a href="/yugioh/appointer-of-the-red-lotus/">Appointer of the Red Lotus</a></li>
+    
+        <li><a href="/yugioh/archnemeses-protos/">Archnemeses Protos</a></li>
+    
+        <li><a href="/yugioh/armageddon-knight/">Armageddon Knight</a></li>
+    
+        <li><a href="/yugioh/artifact-scythe/">Artifact Scythe</a></li>
+    
+        <li><a href="/yugioh/astrograph-sorcerer/">Astrograph Sorcerer</a></li>
+    
+        <li><a href="/yugioh/baronne-de-fleur/">Baronne de Fleur</a></li>
+    
+        <li><a href="/yugioh/barrier-statue-of-the-stormwinds/">Barrier Statue of the Stormwinds</a></li>
+    
+        <li><a href="/yugioh/beatrice-lady-of-the-eternal/">Beatrice, Lady of the Eternal</a></li>
+    
+        <li><a href="/yugioh/black-dragon-collapserpent/">Black Dragon Collapserpent</a></li>
+    
+        <li><a href="/yugioh/blackwing-gofu-the-vague-shadow/">Blackwing - Gofu the Vague Shadow</a></li>
+    
+        <li><a href="/yugioh/blaster-dragon-ruler-of-infernos/">Blaster, Dragon Ruler of Infernos</a></li>
+    
+        <li><a href="/yugioh/block-dragon/">Block Dragon</a></li>
+    
+        <li><a href="/yugioh/borreload-savage-dragon/">Borreload Savage Dragon</a></li>
+    
+        <li><a href="/yugioh/branded-expulsion/">Branded Expulsion</a></li>
+    
+        <li><a href="/yugioh/brilliant-fusion/">Brilliant Fusion</a></li>
+    
+        <li><a href="/yugioh/butterfly-dagger-elma/">Butterfly Dagger - Elma</a></li>
+    
+        <li><a href="/yugioh/bystial-magnamhut/">Bystial Magnamhut</a></li>
+    
+        <li><a href="/yugioh/called-by-the-grave/">Called by the Grave</a></li>
+    
+        <li><a href="/yugioh/card-destruction/">Card Destruction</a></li>
+    
+        <li><a href="/yugioh/card-of-demise/">Card of Demise</a></li>
+    
+        <li><a href="/yugioh/card-of-safe-return/">Card of Safe Return</a></li>
+    
+        <li><a href="/yugioh/chain-strike/">Chain Strike</a></li>
+    
+        <li><a href="/yugioh/change-of-heart/">Change of Heart</a></li>
+    
+        <li><a href="/yugioh/chaos-ruler-the-chaotic-magical-dragon/">Chaos Ruler, the Chaotic Magical Dragon</a></li>
+    
+        <li><a href="/yugioh/chaos-space/">Chaos Space</a></li>
+    
+        <li><a href="/yugioh/chicken-game/">Chicken Game</a></li>
+    
+        <li><a href="/yugioh/cold-wave/">Cold Wave</a></li>
+    
+        <li><a href="/yugioh/confiscation/">Confiscation</a></li>
+    
+        <li><a href="/yugioh/crystron-halqifibrax/">Crystron Halqifibrax</a></li>
+    
+        <li><a href="/yugioh/curious-the-lightsworn-dominion/">Curious, the Lightsworn Dominion</a></li>
+    
+        <li><a href="/yugioh/cyber-jar/">Cyber Jar</a></li>
+    
+        <li><a href="/yugioh/cyber-stein/">Cyber-Stein</a></li>
+    
+        <li><a href="/yugioh/daigusto-emeral/">Daigusto Emeral</a></li>
+    
+        <li><a href="/yugioh/dandylion/">Dandylion</a></li>
+    
+        <li><a href="/yugioh/danger-jackalope/">Danger!? Jackalope?</a></li>
+    
+        <li><a href="/yugioh/danger-tsuchinoko/">Danger!? Tsuchinoko?</a></li>
+    
+        <li><a href="/yugioh/dark-grepher/">Dark Grepher</a></li>
+    
+        <li><a href="/yugioh/delinquent-duo/">Delinquent Duo</a></li>
+    
+        <li><a href="/yugioh/denglong-first-of-the-yang-zing/">Denglong, First of the Yang Zing</a></li>
+    
+        <li><a href="/yugioh/dimension-fusion/">Dimension Fusion</a></li>
+    
+        <li><a href="/yugioh/dinowrestler-pankratops/">Dinowrestler Pankratops</a></li>
+    
+        <li><a href="/yugioh/divine-wind-of-mist-valley/">Divine Wind of Mist Valley</a></li>
+    
+        <li><a href="/yugioh/djinn-releaser-of-rituals/">Djinn Releaser of Rituals</a></li>
+    
+        <li><a href="/yugioh/dragonic-diagram/">Dragonic Diagram</a></li>
+    
+        <li><a href="/yugioh/eclipse-wyvern/">Eclipse Wyvern</a></li>
+    
+        <li><a href="/yugioh/elder-entity-norden/">Elder Entity Norden</a></li>
+    
+        <li><a href="/yugioh/eva/">Eva</a></li>
+    
+        <li><a href="/yugioh/exodia-the-forbidden-one/">Exodia the Forbidden One</a></li>
+    
+        <li><a href="/yugioh/fairy-tail-snow/">Fairy Tail - Snow</a></li>
+    
+        <li><a href="/yugioh/fiber-jar/">Fiber Jar</a></li>
+    
+        <li><a href="/yugioh/final-countdown/">Final Countdown</a></li>
+    
+        <li><a href="/yugioh/fishborg-blaster/">Fishborg Blaster</a></li>
+    
+        <li><a href="/yugioh/foolish-burial/">Foolish Burial</a></li>
+    
+        <li><a href="/yugioh/gateway-of-the-six/">Gateway of the Six</a></li>
+    
+        <li><a href="/yugioh/gem-knight-master-diamond/">Gem-Knight Master Diamond</a></li>
+    
+        <li><a href="/yugioh/giant-trunade/">Giant Trunade</a></li>
+    
+        <li><a href="/yugioh/glow-up-bulb/">Glow-Up Bulb</a></li>
+    
+        <li><a href="/yugioh/gold-sarcophagus/">Gold Sarcophagus</a></li>
+    
+        <li><a href="/yugioh/gozen-match/">Gozen Match</a></li>
+    
+        <li><a href="/yugioh/graceful-charity/">Graceful Charity</a></li>
+    
+        <li><a href="/yugioh/grinder-golem/">Grinder Golem</a></li>
+    
+        <li><a href="/yugioh/guardragon-agarpain/">Guardragon Agarpain</a></li>
+    
+        <li><a href="/yugioh/guardragon-elpy/">Guardragon Elpy</a></li>
+    
+        <li><a href="/yugioh/harpie-s-feather-duster/">Harpie&amp;#39;s Feather Duster</a></li>
+    
+        <li><a href="/yugioh/heavy-storm/">Heavy Storm</a></li>
+    
+        <li><a href="/yugioh/heavymetalfoes-electrumite/">Heavymetalfoes Electrumite</a></li>
+    
+        <li><a href="/yugioh/ib-the-world-chalice-justiciar/">Ib the World Chalice Justiciar</a></li>
+    
+        <li><a href="/yugioh/imperial-order/">Imperial Order</a></li>
+    
+        <li><a href="/yugioh/infernity-launcher/">Infernity Launcher</a></li>
+    
+        <li><a href="/yugioh/instant-fusion/">Instant Fusion</a></li>
+    
+        <li><a href="/yugioh/into-the-void/">Into the Void</a></li>
+    
+        <li><a href="/yugioh/isolde-two-tales-of-the-noble-knights/">Isolde, Two Tales of the Noble Knights</a></li>
+    
+        <li><a href="/yugioh/kaiser-colosseum/">Kaiser Colosseum</a></li>
+    
+        <li><a href="/yugioh/kashtira-arise-heart/">Kashtira Arise-Heart</a></li>
+    
+        <li><a href="/yugioh/kelbek-the-ancient-vanguard/">Kelbek the Ancient Vanguard</a></li>
+    
+        <li><a href="/yugioh/keldo-the-sacred-protector/">Keldo the Sacred Protector</a></li>
+    
+        <li><a href="/yugioh/knightmare-goblin/">Knightmare Goblin</a></li>
+    
+        <li><a href="/yugioh/knightmare-mermaid/">Knightmare Mermaid</a></li>
+    
+        <li><a href="/yugioh/last-turn/">Last Turn</a></li>
+    
+        <li><a href="/yugioh/last-will/">Last Will</a></li>
+    
+        <li><a href="/yugioh/lavalval-chain/">Lavalval Chain</a></li>
+    
+        <li><a href="/yugioh/left-arm-of-the-forbidden-one/">Left Arm of the Forbidden One</a></li>
+    
+        <li><a href="/yugioh/left-leg-of-the-forbidden-one/">Left Leg of the Forbidden One</a></li>
+    
+        <li><a href="/yugioh/level-eater/">Level Eater</a></li>
+    
+        <li><a href="/yugioh/lightning-storm/">Lightning Storm</a></li>
+    
+        <li><a href="/yugioh/linkross/">Linkross</a></li>
+    
+        <li><a href="/yugioh/linkuriboh/">Linkuriboh</a></li>
+    
+        <li><a href="/yugioh/lunalight-tiger/">Lunalight Tiger</a></li>
+    
+        <li><a href="/yugioh/m-x-saber-invoker/">M-X-Saber Invoker</a></li>
+    
+        <li><a href="/yugioh/magical-explosion/">Magical Explosion</a></li>
+    
+        <li><a href="/yugioh/magical-mid-breaker-field/">Magical Mid-Breaker Field</a></li>
+    
+        <li><a href="/yugioh/magical-scientist/">Magical Scientist</a></li>
+    
+        <li><a href="/yugioh/majespecter-unicorn-kirin/">Majespecter Unicorn - Kirin</a></li>
+    
+        <li><a href="/yugioh/mass-driver/">Mass Driver</a></li>
+    
+        <li><a href="/yugioh/master-peace-the-true-dracoslaying-king/">Master Peace, the True Dracoslaying King</a></li>
+    
+        <li><a href="/yugioh/mathmech-circular/">Mathmech Circular</a></li>
+    
+        <li><a href="/yugioh/maxx-c/">Maxx &amp;quot;C&amp;quot;</a></li>
+    
+        <li><a href="/yugioh/mecha-phantom-beast-auroradon/">Mecha Phantom Beast Auroradon</a></li>
+    
+        <li><a href="/yugioh/metamorphosis/">Metamorphosis</a></li>
+    
+        <li><a href="/yugioh/mind-master/">Mind Master</a></li>
+    
+        <li><a href="/yugioh/mirage-of-nightmare/">Mirage of Nightmare</a></li>
+    
+        <li><a href="/yugioh/miscellaneousaurus/">Miscellaneousaurus</a></li>
+    
+        <li><a href="/yugioh/monster-gate/">Monster Gate</a></li>
+    
+        <li><a href="/yugioh/monster-reborn/">Monster Reborn</a></li>
+    
+        <li><a href="/yugioh/morphing-jar/">Morphing Jar</a></li>
+    
+        <li><a href="/yugioh/mudora-the-sword-oracle/">Mudora the Sword Oracle</a></li>
+    
+        <li><a href="/yugioh/mystic-mine/">Mystic Mine</a></li>
+    
+        <li><a href="/yugioh/naturia-sacred-tree/">Naturia Sacred Tree</a></li>
+    
+        <li><a href="/yugioh/number-16-shock-master/">Number 16: Shock Master</a></li>
+    
+        <li><a href="/yugioh/number-42-galaxy-tomahawk/">Number 42: Galaxy Tomahawk</a></li>
+    
+        <li><a href="/yugioh/number-86-heroic-champion-rhongomyniad/">Number 86: Heroic Champion - Rhongomyniad</a></li>
+    
+        <li><a href="/yugioh/number-89-diablosis-the-mind-hacker/">Number 89: Diablosis the Mind Hacker</a></li>
+    
+        <li><a href="/yugioh/number-95-galaxy-eyes-dark-matter-dragon/">Number 95: Galaxy-Eyes Dark Matter Dragon</a></li>
+    
+        <li><a href="/yugioh/number-s0-utopic-zexal/">Number S0: Utopic ZEXAL</a></li>
+    
+        <li><a href="/yugioh/one-day-of-peace/">One Day of Peace</a></li>
+    
+        <li><a href="/yugioh/one-for-one/">One for One</a></li>
+    
+        <li><a href="/yugioh/outer-entity-azathot/">Outer Entity Azathot</a></li>
+    
+        <li><a href="/yugioh/painful-choice/">Painful Choice</a></li>
+    
+        <li><a href="/yugioh/performage-plushfire/">Performage Plushfire</a></li>
+    
+        <li><a href="/yugioh/performapal-monkeyboard/">Performapal Monkeyboard</a></li>
+    
+        <li><a href="/yugioh/phantom-skyblaster/">Phantom Skyblaster</a></li>
+    
+        <li><a href="/yugioh/phoenixian-cluster-amaryllis/">Phoenixian Cluster Amaryllis</a></li>
+    
+        <li><a href="/yugioh/pot-of-greed/">Pot of Greed</a></li>
+    
+        <li><a href="/yugioh/prank-kids-meow-meow-mu/">Prank-Kids Meow-Meow-Mu</a></li>
+    
+        <li><a href="/yugioh/predaplant-verte-anaconda/">Predaplant Verte Anaconda</a></li>
+    
+        <li><a href="/yugioh/premature-burial/">Premature Burial</a></li>
+    
+        <li><a href="/yugioh/psy-framegear-gamma/">PSY-Framegear Gamma</a></li>
+    
+        <li><a href="/yugioh/psy-framelord-omega/">PSY-Framelord Omega</a></li>
+    
+        <li><a href="/yugioh/purrely-delicious-memory/">Purrely Delicious Memory</a></li>
+    
+        <li><a href="/yugioh/purrely-sleepy-memory/">Purrely Sleepy Memory</a></li>
+    
+        <li><a href="/yugioh/reasoning/">Reasoning</a></li>
+    
+        <li><a href="/yugioh/red-reboot/">Red Reboot</a></li>
+    
+        <li><a href="/yugioh/red-rose-dragon/">Red Rose Dragon</a></li>
+    
+        <li><a href="/yugioh/redox-dragon-ruler-of-boulders/">Redox, Dragon Ruler of Boulders</a></li>
+    
+        <li><a href="/yugioh/reinforcement-of-the-army/">Reinforcement of the Army</a></li>
+    
+        <li><a href="/yugioh/rescue-ace-air-lifter/">Rescue-ACE Air Lifter</a></li>
+    
+        <li><a href="/yugioh/return-from-the-different-dimension/">Return from the Different Dimension</a></li>
+    
+        <li><a href="/yugioh/right-arm-of-the-forbidden-one/">Right Arm of the Forbidden One</a></li>
+    
+        <li><a href="/yugioh/right-leg-of-the-forbidden-one/">Right Leg of the Forbidden One</a></li>
+    
+        <li><a href="/yugioh/rivalry-of-warlords/">Rivalry of Warlords</a></li>
+    
+        <li><a href="/yugioh/ronintoadin/">Ronintoadin</a></li>
+    
+        <li><a href="/yugioh/royal-oppression/">Royal Oppression</a></li>
+    
+        <li><a href="/yugioh/runick-fountain/">Runick Fountain</a></li>
+    
+        <li><a href="/yugioh/sekka-s-light/">Sekka&amp;#39;s Light</a></li>
+    
+        <li><a href="/yugioh/self-destruct-button/">Self-Destruct Button</a></li>
+    
+        <li><a href="/yugioh/set-rotation/">Set Rotation</a></li>
+    
+        <li><a href="/yugioh/simorgh-bird-of-sovereignty/">Simorgh, Bird of Sovereignty</a></li>
+    
+        <li><a href="/yugioh/sixth-sense/">Sixth Sense</a></li>
+    
+        <li><a href="/yugioh/sky-striker-mecha-hornet-drones/">Sky Striker Mecha - Hornet Drones</a></li>
+    
+        <li><a href="/yugioh/slash-draw/">Slash Draw</a></li>
+    
+        <li><a href="/yugioh/smoke-grenade-of-the-thief/">Smoke Grenade of the Thief</a></li>
+    
+        <li><a href="/yugioh/snatch-steal/">Snatch Steal</a></li>
+    
+        <li><a href="/yugioh/soul-charge/">Soul Charge</a></li>
+    
+        <li><a href="/yugioh/spright-elf/">Spright Elf</a></li>
+    
+        <li><a href="/yugioh/spyral-master-plan/">SPYRAL Master Plan</a></li>
+    
+        <li><a href="/yugioh/striker-dragon/">Striker Dragon</a></li>
+    
+        <li><a href="/yugioh/substitoad/">Substitoad</a></li>
+    
+        <li><a href="/yugioh/summon-limit/">Summon Limit</a></li>
+    
+        <li><a href="/yugioh/summon-sorceress/">Summon Sorceress</a></li>
+    
+        <li><a href="/yugioh/sunavalon-dryas/">Sunavalon Dryas</a></li>
+    
+        <li><a href="/yugioh/sunvine-healer/">Sunvine Healer</a></li>
+    
+        <li><a href="/yugioh/superheavy-samurai-scarecrow/">Superheavy Samurai Scarecrow</a></li>
+    
+        <li><a href="/yugioh/supreme-king-dragon-starving-venom/">Supreme King Dragon Starving Venom</a></li>
+    
+        <li><a href="/yugioh/t-g-hyper-librarian/">T.G. Hyper Librarian</a></li>
+    
+        <li><a href="/yugioh/tearlaments-havnis/">Tearlaments Havnis</a></li>
+    
+        <li><a href="/yugioh/tearlaments-kitkallos/">Tearlaments Kitkallos</a></li>
+    
+        <li><a href="/yugioh/tearlaments-merrli/">Tearlaments Merrli</a></li>
+    
+        <li><a href="/yugioh/tearlaments-scheiren/">Tearlaments Scheiren</a></li>
+    
+        <li><a href="/yugioh/tempest-magician/">Tempest Magician</a></li>
+    
+        <li><a href="/yugioh/tempest-dragon-ruler-of-storms/">Tempest, Dragon Ruler of Storms</a></li>
+    
+        <li><a href="/yugioh/terraforming/">Terraforming</a></li>
+    
+        <li><a href="/yugioh/that-grass-looks-greener/">That Grass Looks Greener</a></li>
+    
+        <li><a href="/yugioh/the-forceful-sentry/">The Forceful Sentry</a></li>
+    
+        <li><a href="/yugioh/the-tyrant-neptune/">The Tyrant Neptune</a></li>
+    
+        <li><a href="/yugioh/there-can-be-only-one/">There Can Be Only One</a></li>
+    
+        <li><a href="/yugioh/thunder-dragon-colossus/">Thunder Dragon Colossus</a></li>
+    
+        <li><a href="/yugioh/tidal-dragon-ruler-of-waterfalls/">Tidal, Dragon Ruler of Waterfalls</a></li>
+    
+        <li><a href="/yugioh/time-seal/">Time Seal</a></li>
+    
+        <li><a href="/yugioh/topologic-gumblar-dragon/">Topologic Gumblar Dragon</a></li>
+    
+        <li><a href="/yugioh/trap-dustshoot/">Trap Dustshoot</a></li>
+    
+        <li><a href="/yugioh/true-king-of-all-calamities/">True King of All Calamities</a></li>
+    
+        <li><a href="/yugioh/ultimate-offering/">Ultimate Offering</a></li>
+    
+        <li><a href="/yugioh/unchained-soul-of-sharvara/">Unchained Soul of Sharvara</a></li>
+    
+        <li><a href="/yugioh/union-carrier/">Union Carrier</a></li>
+    
+        <li><a href="/yugioh/vanity-s-emptiness/">Vanity&amp;#39;s Emptiness</a></li>
+    
+        <li><a href="/yugioh/victory-dragon/">Victory Dragon</a></li>
+    
+        <li><a href="/yugioh/white-dragon-wyverburster/">White Dragon Wyverburster</a></li>
+    
+        <li><a href="/yugioh/wind-up-carrier-zenmaity/">Wind-Up Carrier Zenmaity</a></li>
+    
+        <li><a href="/yugioh/zoodiac-barrage/">Zoodiac Barrage</a></li>
+    
+        <li><a href="/yugioh/zoodiac-broadbull/">Zoodiac Broadbull</a></li>
+    
+        <li><a href="/yugioh/zoodiac-drident/">Zoodiac Drident</a></li>
+    
+        <li><a href="/yugioh/zoodiac-ratpier/">Zoodiac Ratpier</a></li>
+    
+</ul>
+
+-->
+
+<br>
+<div class="flex flex-col justify-center items-center">
+
+    Search for a card here!: 
+<input type="text" id="search" autocomplete="off" style="border: 1px solid #ccc;" />
+<div id="results"></div>
+<script src="../scripts/search.js" async defer></script>
+
+</div>
+        
+    </body>
+</html>

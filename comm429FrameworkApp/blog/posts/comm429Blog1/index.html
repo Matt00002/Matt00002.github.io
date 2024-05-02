@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comm429 Blog 1</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/card.css">
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        
+  <link rel="stylesheet" href="/css/post.css" />
+
+    </head>
+    <body>
+        <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-bold text-xl">11ty+Tailwind Site</span>
+            </div>
+    
+            <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Home
+                </a>
+                <a href="/search" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Yugioh Banlist
+                </a>
+                <a href="/blog" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white">
+                Blog
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" class="toggle" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
+            </div>
+            </div>
+        </nav>
+
+        
+  <article class="post__content">
+    <h1>Comm429 Blog 1</h1>
+    <p><time>Tue Feb 06 2024 19:00:00 GMT-0500 (Eastern Standard Time)</time></p>
+    <div class="prose lg:prose-xl">
+      <h1>New Project Directory Bash Script</h1>
+<p>To avoid the repeated inconvience of making a new directory for each new project I start, I created a bash script that uses the command line to do it for me.</p>
+<p>To use the script, first place the file in the directory you wish to create your project.</p>
+<p>Next open the command line and enter:</p>
+<pre><code>bash create-project.sh
+</code></pre>
+<p>You can also provide a name for the project as an input like this:</p>
+<pre><code>bash create-project.sh cool-project-name
+</code></pre>
+<h2>What the script does</h2>
+<p>After running the script, a directory will be created, structured like so:</p>
+<ul>
+<li>new-project
+<ul>
+<li>site
+<ul>
+<li>pages</li>
+<li>posts</li>
+<li>comments</li>
+</ul>
+</li>
+<li>assets
+<ul>
+<li>images</li>
+<li>styles</li>
+<li>scripts</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>If a project name was provided, the project folder will be named as such, otherwise it will be named 'new-project'.</p>
+<p>There will also be the following files that contain some boilerplate code.</p>
+<ul>
+<li>index.html</li>
+<li>style.css</li>
+<li>main.js</li>
+</ul>
+<p>The script will also open all of the files it created to help get you started.</p>
+<h2>Looking inside the script</h2>
+<p>The script first checks if any arguments were provided to it with this if statement:</p>
+<pre><code>if [ $# != 0 ]; then
+	NAME=$1
+else
+	NAME=&quot;new-project&quot;
+fi
+</code></pre>
+<p>If there was an argument, then the NAME variable will be set to whatever it was, otherwise it will be set to 'new-project'</p>
+<p>Next, I create all of the new directories, starting with a folder named by the NAME variable:</p>
+<pre><code>mkdir $NAME
+cd $NAME
+mkdir assets site
+cd site
+mkdir pages posts comments
+cd ..
+cd assets
+mkdir images scripts styles
+cd ..
+</code></pre>
+<p>I use mkdir to create directories, while I use cd to change the directory to the one I want to work in.</p>
+<p>After that, I use the touch command to create each of the template files:</p>
+<pre><code>touch index.html
+touch assets/styles/style.css
+touch assets/scripts/main.js
+</code></pre>
+<p>Next I use the echo command to insert boilerplate code into each file, line by line:</p>
+<pre><code>echo &quot;&lt;!DOCTYPE html&gt;&quot; &gt;&gt; index.html
+echo &quot;&lt;html&gt;&quot; &gt;&gt; index.html
+echo &quot;	&lt;head&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;meta charset=\&quot;utf-8\&quot;&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;link rel=\&quot;stylesheet\&quot; href=\&quot;assets/styles/style.css\&quot;&gt;&quot; &gt;&gt; index.html
+echo &quot;	&lt;/head&gt;&quot; &gt;&gt; index.html
+echo &quot;	&lt;body&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;h1&gt;If this is red, the css is working.&lt;/h1&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;h2 id=\&quot;js\&quot;&gt;If this is blue, the js is working.&lt;/h1&gt;&quot; &gt;&gt; index.html
+echo &quot;		&lt;script src=\&quot;assets/scripts/main.js\&quot;&gt;&lt;/script&gt;&quot; &gt;&gt; index.html
+echo &quot;	&lt;/body&gt;&quot; &gt;&gt; index.html
+echo &quot;&lt;/html&gt;&quot; &gt;&gt; index.html
+echo &quot;h1 {color:red;}&quot; &gt;&gt; assets/styles/style.css
+echo &quot;document.getElementById('js').style.color = 'blue';&quot; &gt;&gt; assets/scripts/main.js
+</code></pre>
+<p>Finally, I use xdg-open to open each of the template files:</p>
+<pre><code>xdg-open index.html
+xdg-open assets/scripts/main.js
+xdg-open assets/styles/style.css
+</code></pre>
+<p>xdg-open opens the files in their default applications.</p>
+<h2>What I learned</h2>
+<p>In making this script, I learned how I can better utilize the command line to do simple tasks significantly faster.</p>
+<p>In the future I could use this knowledge to make other scripts, such as a script to help create back-up versions of important files.</p>
+
+    </div>
+  </article>
+
+    </body>
+</html>

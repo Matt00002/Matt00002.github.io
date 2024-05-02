@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comm429 Blog 2</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/card.css">
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        
+  <link rel="stylesheet" href="/css/post.css" />
+
+    </head>
+    <body>
+        <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-bold text-xl">11ty+Tailwind Site</span>
+            </div>
+    
+            <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Home
+                </a>
+                <a href="/search" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Yugioh Banlist
+                </a>
+                <a href="/blog" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white">
+                Blog
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" class="toggle" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
+            </div>
+            </div>
+        </nav>
+
+        
+  <article class="post__content">
+    <h1>Comm429 Blog 2</h1>
+    <p><time>Sun Mar 10 2024 20:00:00 GMT-0400 (Eastern Daylight Time)</time></p>
+    <div class="prose lg:prose-xl">
+      <h2>Some (maybe) Common Mistakes with configuring 11ty and Tailwind to show markdown files</h2>
+<p>This is a short guide on how to use 11ty and tailwind to display a pre-existing markdown file.</p>
+<p>To show my blog and other things, I created a static site using 11ty and Tailwind CSS.</p>
+<p>While the site looked nice, when I tried to put up my pre-existing blog post, nothing looked right!</p>
+<p>Here is what the blog post is supposed to look like:</p>
+<p><img src="../../../assets/blog_after.png" alt="blog_after"></p>
+<p>And here is what I saw:</p>
+<p><img src="../../../assets/blog_before.png" alt="blog_before"></p>
+<p>As you can see, its just plain old text. No headings, no code-blocks.</p>
+<p>To fix this I did some trouble shooting.</p>
+<h2>Tailwind overrides my defaults</h2>
+<p>The main issue comes from Tailwind. As it turned out, the default styles for markdown were overridden.</p>
+<p>For a new file, this might be ok, you could just write it using Tailwind styles. But, in the case of an old file, re-writing my blog post would be tedious.</p>
+<p>This is especially the case for someone who is moving their entire blog from another site to a Tailwind site, while re-writing one post maybe tolerable, re-writing years of blogging is not.</p>
+<h2>So, what's the fix?</h2>
+<p>Fortunately, other people did the complaining for me, and Tailwind released a plugin to allow the default styles.</p>
+<p>The plugin is called Tailwind CSS Typeography. For additional info about it, click the link <a href="https://tailwindcss.com/blog/tailwindcss-typography">here</a>.</p>
+<p>To import the plugin you will need to open your tailwind configuration file, 'tailwind.config.js'.</p>
+<p>In the file, go to the pluins array (or create one if its not there), and add the plugin like this:</p>
+<pre><code>plugins: [
+  ...,
+  require('@tailwindcss/typography')
+],
+</code></pre>
+<p>The plugin adds a new set of 'prose' classes that will make any vanilla markdown files look as they were intended to.</p>
+<p>To apply one of the classes, simply go the layout you are using for your blog posts and add a div tag around the content block like so:</p>
+<pre><code>&lt;div class=&quot;prose lg:prose-xl&quot;&gt;
+
+  {{ content | safe }}
+
+&lt;/div&gt;
+</code></pre>
+<p>With that your markdown file should be looking mostly normal.</p>
+<p>Mostly? Thats right, there is one more issue.</p>
+<h2>The code-blocks still aren't working!</h2>
+<p>If you're using the default 11ty settings, the code-blocks in your markdown files still won't look right.</p>
+<p>By default, 11ty disables indented code-blocks. This is because the code-block feature can mess with retrieved content or shortcode that happens to contain indents.</p>
+<h2>So, what's the fix?</h2>
+<p>Fortunately, this is easy to re-enable. The method I'm using is found <a href="https://www.11ty.dev/docs/languages/markdown/">here</a> in the 11ty docs.</p>
+<p>To do so, you will need to go to your 'eleventy.js' file and use 'ammendLibrary' like so:</p>
+<pre><code>module.exports = function(eleventyConfig){
+    eleventyConfig.amendLibrary(&quot;md&quot;, (mdLib) =&gt; mdLib.enable(&quot;code&quot;));
+}
+</code></pre>
+<p>With this, your code-blocks should now re-appear and your markdown files should look like they do on any other site.</p>
+
+    </div>
+  </article>
+
+    </body>
+</html>

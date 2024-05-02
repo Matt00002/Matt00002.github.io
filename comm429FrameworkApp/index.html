@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/card.css">
+<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+        
+    </head>
+    <body>
+        <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span class="font-bold text-xl">11ty+Tailwind Site</span>
+            </div>
+    
+            <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="/" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Home
+                </a>
+                <a href="/search" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">
+                Yugioh Banlist
+                </a>
+                <a href="/blog" class="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white">
+                Blog
+                </a>
+            </div>
+            <div>
+                <input type="checkbox" class="toggle" data-toggle-theme="dark,light" data-act-class="ACTIVECLASS" />
+            </div>
+            </div>
+        </nav>
+
+        
+            <br>
+<div class="flex flex-col justify-center items-center">
+
+    <p class="text-2xl">Home Page</p>
+    <div class="w-3/4">
+
+<p class="text-xl">Welcome to my static site! 
+    <br>This site was built using 11ty, Tailwind CSS, and daisyUI. 
+    <br>It has three main pages, this home page, a page to view yugioh cards, and a blog directory.</p>
+
+<br><br>
+<p class="text-lg">The home page is just this, from it the other pages can be reached, not much else to say here.</p>
+<br>
+
+<p class="text-lg">The next page can be used to view yugioh cards.
+    <br>The page has a search bar, that when typed into, will generate links to cards whose names match the query.
+    <br>Each card has its own page that can be reached by clicking the card name.
+    <br>On these pages information about the card is displayed, such as the card's name, status on the banlist, effect text, and an image.
+    <br>To avoid making too large of a site, I limited the pool of cards to only those on the current banlist.
+    <br>For some example cards to search for, try "pot of greed", or "monster reborn".
+    <br>To vist that page, click the button below or use the links in the header.</p>
+
+<br><a href="/search">
+<button class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">Go!</button>
+</a><br><br>
+
+<p class="text-lg">The final page is the blog directory, it contains links to some blog posts.
+    <br>Here I've added all of the blog posts I've made in the course, as well as some filler posts that I made while creating/testing the site.
+    <br>To go to that page, click the button below or use the links in the header.
+</p>
+
+<br><a href="/blog">
+    <button class="bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded">Also Go!</button>
+</a>
+
+</div>
+</div>
+        
+    </body>
+</html>
