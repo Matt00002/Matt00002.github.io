@@ -17,5 +17,5 @@
       document.getElementById('results').innerHTML = results.join('')
     })
   
-    const posts = await fetch('/search.json').then(res => res.json())
+    const posts = await fetch('/comm429FrameworkApp/search.json').then(res => res.json())
   })()
